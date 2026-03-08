@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Macaws.ai — Bespoke 24/7 AI Receptionists</title>
+  <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
@@ -1127,6 +1128,9 @@
       line-height: 1.65;
       color: #64748b;
     }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .social-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: #64748b; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+    .social-link:hover { background: rgba(240,80,70,.15); color: var(--brand); border-color: rgba(240,80,70,.3); }
 
     .footer-col h4 {
       font-size: 13px;
@@ -1226,8 +1230,9 @@
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/about.html">About</a></li>
       </ul>
-      <a href="#demo" class="btn-nav">Get started</a>
+      <a href="#pricing" class="btn-nav">Get started</a>
     </div>
   </nav>
 
@@ -1336,8 +1341,8 @@
         without the overhead.
       </p>
       <div class="hero-ctas">
-        <a href="#demo" class="btn-primary">Book a free demo</a>
-        <a href="#how-it-works" class="btn-secondary">See how it works</a>
+        <a href="#pricing" class="btn-primary">Buy Now</a>
+        <a href="https://link.knotie.ai/widget/form/an8joTiVA9bPfx42MzQJ" class="btn-secondary" target="_blank" rel="noopener">See how it works</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item"><span class="check">✓</span> No setup fees</div>
@@ -1361,7 +1366,7 @@
             <span style="font-size:10px;color:#94a3b8;font-family:monospace">app.macaws.ai/dashboard</span>
           </div>
         </div>
-        <img src="screen%20shot%20of%20knotie.jpg" alt="Macaws.ai Dashboard — monitor every call 24/7" class="mockup-screenshot" />
+        <img src="analytics.png" alt="Macaws.ai Dashboard — monitor every call 24/7" class="mockup-screenshot" />
       </div>
     </div>
   </section>
@@ -1467,7 +1472,7 @@
     <div class="section-inner">
       <div class="stats-grid">
         <div class="reveal" style="text-align:center">
-          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-num">100<span>%</span></div>
           <div class="stat-label">Call answer rate</div>
         </div>
         <div class="reveal" style="text-align:center;transition-delay:.1s">
@@ -1525,30 +1530,8 @@
           </div>
         </div>
         <div class="showcase-visual reveal">
-          <div class="visual-placeholder">
-            <div class="visual-card">
-              <div class="visual-card-header">
-                <div class="visual-card-icon">
-                  <svg width="16" height="16" fill="none" stroke="#E84535" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-                <div>
-                  <div class="visual-card-title">Today's Performance</div>
-                  <div class="visual-card-sub">Live · updated every 30s</div>
-                </div>
-              </div>
-              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:10px">
-                <span>Calls handled</span><strong style="color:var(--dark)">47</strong>
-              </div>
-              <div class="mini-bar"><div class="mini-bar-fill" style="width:82%"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:10px">
-                <span>Bookings made</span><strong style="color:var(--dark)">31</strong>
-              </div>
-              <div class="mini-bar"><div class="mini-bar-fill" style="width:66%;background:#2563eb"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:10px">
-                <span>Avg. call duration</span><strong style="color:var(--dark)">2m 14s</strong>
-              </div>
-              <div class="mini-bar"><div class="mini-bar-fill" style="width:45%;background:#10b981"></div></div>
-            </div>
+          <div class="visual-placeholder" style="padding:0;overflow:hidden;background:none">
+            <img src="screen%20shot%20of%20knotie.jpg" alt="Macaws.ai call dashboard" style="width:100%;display:block;border-radius:12px;" />
           </div>
         </div>
       </div>
@@ -1630,51 +1613,46 @@
 
       <div class="pricing-grid">
         <div class="pricing-card reveal">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">£299<span>/mo</span></div>
-          <div class="pricing-desc">For small businesses wanting to stop missing calls.</div>
+          <div class="pricing-tier">Virtual Front Desk</div>
+          <div class="pricing-price">£99<span>/mo</span></div>
+          <div class="pricing-desc">Everything you need to never miss a call again.</div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Up to 200 calls/month</li>
+            <li><span class="check">✓</span> Unlimited inbound calls</li>
             <li><span class="check">✓</span> 1 AI receptionist persona</li>
-            <li><span class="check">✓</span> Appointment booking</li>
+            <li><span class="check">✓</span> Trained on your company's data</li>
             <li><span class="check">✓</span> Email summaries</li>
-            <li><span class="check">✓</span> Standard onboarding</li>
           </ul>
-          <a href="#demo" class="btn-pricing outline">Get started</a>
+          <a href="https://link.knotie.ai/payment-link/69ad559d1934f9590a5c7356" target="_blank" rel="noopener" class="btn-pricing outline">Get started</a>
         </div>
 
         <div class="pricing-card featured reveal" style="transition-delay:.1s">
           <div class="pricing-badge">Most popular</div>
-          <div class="pricing-tier">Growth</div>
-          <div class="pricing-price">£599<span>/mo</span></div>
-          <div class="pricing-desc">For growing teams who need reliability and reporting.</div>
+          <div class="pricing-tier">Integrated Associate</div>
+          <div class="pricing-price">£249<span>/mo</span></div>
+          <div class="pricing-desc">Everything in Virtual Front Desk, plus powerful growth tools.</div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Up to 600 calls/month</li>
-            <li><span class="check">✓</span> 2 AI receptionist personas</li>
-            <li><span class="check">✓</span> Calendar & CRM integrations</li>
-            <li><span class="check">✓</span> Live call dashboard</li>
-            <li><span class="check">✓</span> Priority onboarding (48h)</li>
-            <li><span class="check">✓</span> Monthly performance review</li>
+            <li><span class="check">✓</span> All Virtual Front Desk features</li>
+            <li><span class="check">✓</span> Native CRM integration</li>
+            <li><span class="check">✓</span> Google Business Review system</li>
+            <li><span class="check">✓</span> Social media management</li>
           </ul>
-          <a href="#demo" class="btn-pricing filled">Get started</a>
+          <a href="https://link.knotie.ai/payment-link/69ad580b84b2d7579b6287a8" target="_blank" rel="noopener" class="btn-pricing filled">Get started</a>
         </div>
 
         <div class="pricing-card reveal" style="transition-delay:.2s">
-          <div class="pricing-tier">Enterprise</div>
-          <div class="pricing-price" style="font-size:28px;padding-top:6px">Custom</div>
-          <div class="pricing-desc">For multi-location businesses with complex workflows.</div>
+          <div class="pricing-tier">Growth Engine</div>
+          <div class="pricing-price">£499<span>/mo</span></div>
+          <div class="pricing-desc">For businesses ready to scale revenue across every channel.</div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Unlimited calls</li>
-            <li><span class="check">✓</span> Multiple personas & languages</li>
-            <li><span class="check">✓</span> Dedicated account manager</li>
-            <li><span class="check">✓</span> Custom integrations</li>
-            <li><span class="check">✓</span> SLA guarantee</li>
-            <li><span class="check">✓</span> White-label available</li>
+            <li><span class="check">✓</span> All Integrated Associate features</li>
+            <li><span class="check">✓</span> Outbound dialer</li>
+            <li><span class="check">✓</span> Multi-channel retargeting system</li>
+            <li><span class="check">✓</span> WhatsApp automation</li>
           </ul>
-          <a href="#demo" class="btn-pricing outline">Talk to sales</a>
+          <a href="https://link.knotie.ai/payment-link/69ad58f51934f913915c74d7" target="_blank" rel="noopener" class="btn-pricing outline">Get started</a>
         </div>
       </div>
     </div>
@@ -1796,10 +1774,7 @@
       <p class="section-eyebrow" style="text-align:center;margin-bottom:12px">Get started</p>
       <h2>Book your free demo</h2>
       <p>See Macaws live in a 20-minute call. We'll show you exactly how your AI receptionist would sound for your business — no commitment required.</p>
-      <form class="demo-form" onsubmit="return false">
-        <input class="demo-input" type="email" placeholder="Enter your email address" />
-        <button class="btn-demo">Book a demo →</button>
-      </form>
+      <a href="https://chao.macaws.ai" target="_blank" rel="noopener" class="btn-demo" style="display:inline-block;text-decoration:none;margin-top:8px">Book a demo →</a>
       <p class="demo-note">No credit card required · Response within 1 business hour</p>
     </div>
   </div>
@@ -1810,8 +1785,8 @@
       <h2>Stop missing calls.<br>Start booking more.</h2>
       <p>Join hundreds of businesses using Macaws.ai to answer every call and grow their revenue — automatically.</p>
       <div class="cta-buttons">
-        <a href="#demo" class="btn-cta-primary">Get started free</a>
-        <a href="#features" class="btn-cta-ghost">Learn more</a>
+        <a href="#pricing" class="btn-cta-primary">Get started</a>
+        <a href="https://link.knotie.ai/widget/form/an8joTiVA9bPfx42MzQJ" class="btn-cta-ghost" target="_blank" rel="noopener">Learn more</a>
       </div>
     </div>
   </section>
@@ -1823,32 +1798,27 @@
         <div class="footer-brand">
           <img src="brand/macaws_logo.png" alt="Macaws.ai" />
           <p>Bespoke 24/7 AI receptionists for businesses that can't afford to miss a call.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Integrations</a></li>
-            <li><a href="#">Security</a></li>
-          </ul>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/macaws-ai/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/macaws.ai/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="/about.html">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">GDPR</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
           </ul>
         </div>
       </div>

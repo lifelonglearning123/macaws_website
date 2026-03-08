@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Macaws.ai</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand: #f05046;
+      --brand-dark: #d63c33;
+      --dark: #1a1a1b;
+      --mid: #3d3d3f;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #FDFDFD;
+      --charcoal: #58595b;
+    }
+
+    * { box-sizing: border-box; }
+    html { font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--dark); margin: 0; overflow-x: hidden; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ── Nav ── */
+    .nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 40px; }
+    .nav-logo img { height: 28px; display: block; }
+    .nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 32px; flex: 1; }
+    .nav-links a { font-size: 14px; font-weight: 600; color: var(--mid); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--brand); }
+    .btn-nav {
+      margin-left: auto;
+      background: var(--brand);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 9px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .btn-nav:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+    /* ── Page header ── */
+    .page-header {
+      background: #060d1a;
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .page-header-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: rgba(240,80,70,.12);
+      border: 1px solid rgba(240,80,70,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .page-header h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .page-header p { font-size: 16px; color: #64748b; margin: 0; }
+
+    /* ── Content ── */
+    .legal-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .legal-body h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin: 48px 0 12px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+    .legal-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+    .legal-body h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--mid);
+      margin: 24px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .legal-body p { font-size: 15px; color: #374151; line-height: 1.75; margin: 0 0 16px; }
+
+    .legal-body ul { margin: 0 0 16px; padding-left: 20px; }
+    .legal-body ul li { font-size: 15px; color: #374151; line-height: 1.75; margin-bottom: 6px; }
+
+    .legal-body a { color: var(--brand); text-decoration: none; }
+    .legal-body a:hover { text-decoration: underline; }
+
+    .legal-callout {
+      background: #fff1f0;
+      border-left: 3px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .legal-callout p { margin: 0; font-size: 14px; color: var(--mid); }
+    .legal-callout strong { color: var(--brand-dark); }
+
+    /* ── Footer ── */
+    .footer { background: #060d1a; padding: 64px 24px 32px; color: #94a3b8; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 260px 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .footer-brand img { height: 26px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; line-height: 1.65; color: #64748b; }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .social-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: #64748b; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+    .social-link:hover { background: rgba(240,80,70,.15); color: var(--brand); border-color: rgba(240,80,70,.3); }
+    .footer-col h4 { font-size: 13px; color: #e2e8f0; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 16px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 14px; color: #64748b; text-decoration: none; transition: color .2s ease; }
+    .footer-col a:hover { color: #cbd5e1; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; font-size: 13px; color: #475569; flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 640px) { .footer-top { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <img src="brand/macaws_logo.png" alt="Macaws.ai" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/#demo" class="btn-nav">Get started</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-tag">Legal</div>
+    <h1>Terms of Service</h1>
+    <p>Last updated: 1 March 2026</p>
+  </div>
+
+  <div class="legal-body">
+
+    <div class="legal-callout">
+      <p><strong>Please read these terms carefully.</strong> By using Macaws.ai you agree to be bound by these Terms of Service. If you do not agree, please do not use the service.</p>
+    </div>
+
+    <h2>1. Definitions</h2>
+    <p>In these Terms:</p>
+    <ul>
+      <li><strong>"Macaws", "we", "us", "our"</strong> means Macaws.ai Ltd, a company registered in England and Wales.</li>
+      <li><strong>"Service"</strong> means the Macaws.ai AI receptionist platform, dashboard, and any related software or features.</li>
+      <li><strong>"Customer", "you"</strong> means the individual or business that has registered for and uses the Service.</li>
+      <li><strong>"Caller"</strong> means any third party whose call is handled by the Service on your behalf.</li>
+      <li><strong>"Content"</strong> means any data, call recordings, transcripts, messages, or materials processed through the Service.</li>
+    </ul>
+
+    <h2>2. Acceptance of Terms</h2>
+    <p>By registering an account, clicking "I agree", or using any part of the Service, you confirm that you have read, understood, and agree to these Terms and our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+    <p>If you are accepting on behalf of a company or organisation, you represent that you have authority to bind that entity. These Terms then apply to that entity.</p>
+
+    <h2>3. The Service</h2>
+    <p>Macaws.ai provides an AI-powered telephone receptionist service that answers incoming calls on behalf of your business, takes messages, books appointments, and integrates with your existing tools. The specific features available to you depend on your chosen subscription plan.</p>
+    <p>We reserve the right to modify, update, or discontinue any feature of the Service at any time. Where material changes affect your paid plan, we will give you at least 30 days' notice.</p>
+
+    <h2>4. Account Registration</h2>
+    <p>To use the Service you must create an account and provide accurate, current, and complete information. You are responsible for:</p>
+    <ul>
+      <li>Maintaining the confidentiality of your login credentials</li>
+      <li>All activity that occurs under your account</li>
+      <li>Notifying us immediately of any unauthorised access at <a href="mailto:support@macaws.ai">support@macaws.ai</a></li>
+    </ul>
+    <p>You must be at least 18 years old and authorised to enter into a binding contract to use the Service.</p>
+
+    <h2>5. Subscriptions and Payment</h2>
+    <h3>Billing</h3>
+    <p>The Service is offered on a subscription basis. Fees are charged in advance on a monthly or annual basis depending on your chosen plan. All prices are shown inclusive or exclusive of VAT as indicated at checkout.</p>
+    <h3>Payment</h3>
+    <p>Payment is processed via our third-party payment provider. By providing payment details, you authorise us to charge the applicable fees on each billing cycle.</p>
+    <h3>Late payment</h3>
+    <p>If a payment fails, we will notify you and attempt to retry. If payment remains outstanding after 7 days, we may suspend your account until the balance is settled.</p>
+    <h3>Refunds</h3>
+    <p>Subscription fees are non-refundable except where required by applicable law or as otherwise agreed in writing. If you cancel, you will retain access until the end of your current billing period.</p>
+    <h3>Price changes</h3>
+    <p>We may change our pricing with 30 days' notice. Continued use of the Service after the notice period constitutes acceptance of the new pricing.</p>
+
+    <h2>6. Acceptable Use</h2>
+    <p>You agree not to use the Service to:</p>
+    <ul>
+      <li>Violate any applicable law or regulation, including data protection, consumer protection, or telecommunications law</li>
+      <li>Conduct fraudulent, misleading, or deceptive activities</li>
+      <li>Harass, threaten, or harm callers or any third party</li>
+      <li>Send unsolicited communications (spam) or engage in unlawful marketing practices</li>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the Service</li>
+      <li>Resell or sublicense access to the Service without our written consent</li>
+      <li>Interfere with or disrupt the integrity or performance of the Service</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate your account immediately if we determine, in our sole discretion, that you have breached this section.</p>
+
+    <h2>7. Your Responsibilities</h2>
+    <p>As the business deploying the AI receptionist, you are responsible for:</p>
+    <ul>
+      <li>Ensuring callers are informed that their call may be recorded or handled by an AI system, as required by applicable law</li>
+      <li>The accuracy and legality of any scripts, instructions, or information you configure within the Service</li>
+      <li>Maintaining appropriate consents from your customers in connection with data processed through the Service</li>
+      <li>Complying with all industry-specific regulations applicable to your business (e.g. healthcare, financial services)</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>All intellectual property rights in the Service, including its software, algorithms, branding, and documentation, belong to Macaws.ai Ltd. Nothing in these Terms transfers any ownership of our IP to you.</p>
+    <p>You retain ownership of your Content. By using the Service, you grant us a limited, non-exclusive licence to process your Content solely to provide and improve the Service.</p>
+
+    <h2>9. Data and Privacy</h2>
+    <p>Our collection and use of personal data is governed by our <a href="/privacy-policy.html">Privacy Policy</a>. Where we process personal data on your behalf (as a data processor), the terms of our Data Processing Addendum apply, which forms part of these Terms.</p>
+    <p>You agree to use the Service in compliance with the UK GDPR and all applicable data protection laws.</p>
+
+    <h2>10. Confidentiality</h2>
+    <p>Each party agrees to keep confidential any non-public information disclosed by the other party that is designated as confidential or that reasonably should be understood to be confidential. This obligation does not apply to information that is publicly available or independently developed.</p>
+
+    <h2>11. Disclaimers</h2>
+    <p>The Service is provided "as is" and "as available". To the fullest extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+    <p>We do not warrant that the Service will be uninterrupted, error-free, or that every call will be answered perfectly. AI responses may occasionally be inaccurate; you should review call logs and maintain appropriate human oversight.</p>
+
+    <h2>12. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, Macaws.ai Ltd's total aggregate liability to you for any claims arising under or in connection with these Terms shall not exceed the total fees paid by you in the 12 months preceding the claim.</p>
+    <p>We shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including loss of profits, loss of data, or loss of business, even if we have been advised of the possibility of such damages.</p>
+    <p>Nothing in these Terms limits or excludes liability for death or personal injury caused by negligence, fraud, or any other matter that cannot be excluded by law.</p>
+
+    <h2>13. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Macaws.ai Ltd and its officers, employees, and agents from any claims, damages, or expenses (including reasonable legal fees) arising from your use of the Service, your breach of these Terms, or your violation of any third-party rights.</p>
+
+    <h2>14. Term and Termination</h2>
+    <p>These Terms remain in effect for as long as you have an active account. Either party may terminate at any time:</p>
+    <ul>
+      <li><strong>You:</strong> Cancel your subscription through your dashboard or by emailing <a href="mailto:support@macaws.ai">support@macaws.ai</a></li>
+      <li><strong>Us:</strong> We may terminate with 30 days' notice for any reason, or immediately for breach of these Terms</li>
+    </ul>
+    <p>Upon termination, your access to the Service will cease. We will retain your data in accordance with our Privacy Policy and provide an export upon request within 30 days of termination.</p>
+
+    <h2>15. Governing Law and Disputes</h2>
+    <p>These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+    <p>Before commencing legal proceedings, both parties agree to attempt to resolve any dispute in good faith through direct negotiation for at least 30 days.</p>
+
+    <h2>16. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of material changes at least 30 days before they take effect via email or a prominent notice on our website. Continued use of the Service after the effective date constitutes acceptance of the revised Terms.</p>
+
+    <h2>17. Contact</h2>
+    <p>For any questions about these Terms, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:legal@macaws.ai">legal@macaws.ai</a></li>
+      <li>Post: Macaws.ai Ltd, Legal Team, United Kingdom</li>
+    </ul>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="brand/macaws_logo.png" alt="Macaws.ai" />
+          <p>Bespoke 24/7 AI receptionists for businesses that can't afford to miss a call.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/macaws-ai/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/macaws.ai/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#how-it-works">Integrations</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/#demo">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Macaws.ai Ltd. All rights reserved.</span>
+        <span>Made in the UK 🇬🇧</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

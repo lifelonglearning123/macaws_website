@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Macaws.ai</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand: #f05046;
+      --brand-dark: #d63c33;
+      --dark: #1a1a1b;
+      --mid: #3d3d3f;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #FDFDFD;
+      --charcoal: #58595b;
+    }
+
+    * { box-sizing: border-box; }
+    html { font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--dark); margin: 0; overflow-x: hidden; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ── Nav ── */
+    .nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 40px; }
+    .nav-logo img { height: 28px; display: block; }
+    .nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 32px; flex: 1; }
+    .nav-links a { font-size: 14px; font-weight: 600; color: var(--mid); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--brand); }
+    .btn-nav {
+      margin-left: auto;
+      background: var(--brand);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 9px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .btn-nav:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+    /* ── Page header ── */
+    .page-header {
+      background: #060d1a;
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .page-header-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: rgba(240,80,70,.12);
+      border: 1px solid rgba(240,80,70,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .page-header h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .page-header p {
+      font-size: 16px;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* ── Content ── */
+    .legal-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .legal-body h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin: 48px 0 12px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+    .legal-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+    .legal-body h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--mid);
+      margin: 24px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .legal-body p {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      margin: 0 0 16px;
+    }
+
+    .legal-body ul {
+      margin: 0 0 16px;
+      padding-left: 20px;
+    }
+    .legal-body ul li {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .legal-body a { color: var(--brand); text-decoration: none; }
+    .legal-body a:hover { text-decoration: underline; }
+
+    .legal-callout {
+      background: #fff1f0;
+      border-left: 3px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .legal-callout p { margin: 0; font-size: 14px; color: var(--mid); }
+    .legal-callout strong { color: var(--brand-dark); }
+
+    /* ── Footer ── */
+    .footer { background: #060d1a; padding: 64px 24px 32px; color: #94a3b8; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 260px 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .footer-brand img { height: 26px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; line-height: 1.65; color: #64748b; }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .social-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: #64748b; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+    .social-link:hover { background: rgba(240,80,70,.15); color: var(--brand); border-color: rgba(240,80,70,.3); }
+    .footer-col h4 { font-size: 13px; color: #e2e8f0; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 16px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 14px; color: #64748b; text-decoration: none; transition: color .2s ease; }
+    .footer-col a:hover { color: #cbd5e1; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; font-size: 13px; color: #475569; flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 640px) { .footer-top { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <img src="brand/macaws_logo.png" alt="Macaws.ai" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/#demo" class="btn-nav">Get started</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-tag">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 1 March 2026</p>
+  </div>
+
+  <div class="legal-body">
+
+    <div class="legal-callout">
+      <p><strong>Summary:</strong> We collect only what we need, never sell your data, and give you full control under UK GDPR. Read on for the full details.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Macaws.ai Ltd ("Macaws", "we", "us", "our") is a company registered in England and Wales. We operate the Macaws.ai platform — an AI-powered receptionist and call-handling service. Our registered address and contact details are available on request at <a href="mailto:privacy@macaws.ai">privacy@macaws.ai</a>.</p>
+    <p>We are the data controller for personal data collected through our website (macaws.ai) and the services we provide to you.</p>
+
+    <h2>2. What Data We Collect</h2>
+    <h3>Information you provide</h3>
+    <ul>
+      <li>Contact details when you sign up or book a demo (name, email address, phone number, company name)</li>
+      <li>Billing and payment information (processed securely via our payment provider — we do not store card details)</li>
+      <li>Any information you share with us via email, chat, or support tickets</li>
+    </ul>
+    <h3>Call data</h3>
+    <ul>
+      <li>Call recordings and transcripts handled by the Macaws.ai AI receptionist on behalf of your business</li>
+      <li>Caller information (phone numbers, names, and details disclosed during a call)</li>
+      <li>Appointment and booking data generated through the service</li>
+    </ul>
+    <h3>Usage and technical data</h3>
+    <ul>
+      <li>IP address, browser type, and device information</li>
+      <li>Pages visited, time spent, and interactions with our website</li>
+      <li>Cookies and similar tracking technologies (see Section 8)</li>
+    </ul>
+
+    <h2>3. How We Use Your Data</h2>
+    <p>We process your personal data for the following purposes and legal bases:</p>
+    <ul>
+      <li><strong>To provide the service</strong> — performance of a contract with you</li>
+      <li><strong>To process payments and send invoices</strong> — performance of a contract and legal obligation</li>
+      <li><strong>To respond to enquiries and provide support</strong> — legitimate interests</li>
+      <li><strong>To send service updates and product communications</strong> — legitimate interests (you may opt out at any time)</li>
+      <li><strong>To improve our platform</strong> — legitimate interests, using aggregated and anonymised data</li>
+      <li><strong>To comply with legal and regulatory obligations</strong> — legal obligation</li>
+    </ul>
+
+    <h2>4. Call Recordings and AI Processing</h2>
+    <p>Our core service involves processing telephone calls on your behalf. Call recordings and transcripts are stored securely and used to:</p>
+    <ul>
+      <li>Provide you with accurate call logs and summaries in your dashboard</li>
+      <li>Train and improve the AI model specific to your business (with your consent)</li>
+      <li>Investigate disputes or service issues</li>
+    </ul>
+    <p>You are responsible for notifying callers that their call may be recorded, as required by applicable law. We will provide appropriate disclosures in call opening scripts on your behalf where you instruct us to do so.</p>
+
+    <h2>5. Data Sharing</h2>
+    <p>We do not sell, rent, or trade your personal data. We share data only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> Trusted third parties who process data on our behalf (e.g. cloud hosting, payment processing, analytics) under strict data processing agreements</li>
+      <li><strong>Integration partners:</strong> Only when you explicitly connect a third-party app (e.g. Google Calendar, HubSpot) through your dashboard</li>
+      <li><strong>Legal requirements:</strong> Where we are required to disclose data by law, court order, or regulatory authority</li>
+      <li><strong>Business transfers:</strong> In connection with a merger or acquisition, where data would transfer to the successor entity under equivalent protections</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <p>We retain your personal data for as long as necessary to provide the service and comply with legal obligations:</p>
+    <ul>
+      <li>Account data — for the duration of your subscription plus 12 months</li>
+      <li>Call recordings and transcripts — 90 days by default; configurable in your dashboard</li>
+      <li>Billing records — 7 years (UK legal requirement)</li>
+      <li>Marketing data — until you unsubscribe or request deletion</li>
+    </ul>
+
+    <h2>7. Your Rights Under UK GDPR</h2>
+    <p>As a data subject you have the following rights:</p>
+    <ul>
+      <li><strong>Right of access</strong> — request a copy of the personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — ask us to correct inaccurate data</li>
+      <li><strong>Right to erasure</strong> — request deletion of your data where there is no lawful basis to retain it</li>
+      <li><strong>Right to restriction</strong> — ask us to limit processing in certain circumstances</li>
+      <li><strong>Right to portability</strong> — receive your data in a structured, machine-readable format</li>
+      <li><strong>Right to object</strong> — object to processing based on legitimate interests</li>
+      <li><strong>Right to withdraw consent</strong> — where processing is based on consent, withdraw it at any time</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:privacy@macaws.ai">privacy@macaws.ai</a>. We will respond within 30 days. You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+    <h2>8. Cookies</h2>
+    <p>We use cookies and similar technologies to operate the website and understand how it is used. These include:</p>
+    <ul>
+      <li><strong>Essential cookies</strong> — required for the website to function (e.g. session management)</li>
+      <li><strong>Analytics cookies</strong> — to understand traffic and user behaviour (anonymised)</li>
+      <li><strong>Marketing cookies</strong> — only placed with your consent, to enable relevant advertising</li>
+    </ul>
+    <p>You can manage your cookie preferences at any time through your browser settings or our cookie consent banner.</p>
+
+    <h2>9. International Transfers</h2>
+    <p>Our infrastructure is primarily hosted in the UK and EEA. Where we transfer data outside the UK/EEA (for example to US-based service providers), we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the ICO.</p>
+
+    <h2>10. Security</h2>
+    <p>We implement industry-standard technical and organisational measures to protect your data, including encryption in transit (TLS 1.2+), encryption at rest, access controls, and regular security reviews. In the event of a data breach that poses a risk to you, we will notify you and the ICO as required by law.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of material changes via email or a prominent notice on our website. The "Last updated" date at the top of this page reflects when the most recent changes took effect.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>For any privacy-related questions, requests, or complaints, please contact our Data Protection team:</p>
+    <ul>
+      <li>Email: <a href="mailto:privacy@macaws.ai">privacy@macaws.ai</a></li>
+      <li>Post: Macaws.ai Ltd, Data Protection Team, United Kingdom</li>
+    </ul>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="brand/macaws_logo.png" alt="Macaws.ai" />
+          <p>Bespoke 24/7 AI receptionists for businesses that can't afford to miss a call.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/macaws-ai/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/macaws.ai/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#how-it-works">Integrations</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/#demo">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Macaws.ai Ltd. All rights reserved.</span>
+        <span>Made in the UK 🇬🇧</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
