@@ -595,15 +595,14 @@
 
     /* ── Logos ── */
     .logos-section {
-      padding: 48px 24px;
+      padding: 40px 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       background: #fff;
+      overflow: hidden;
     }
 
     .logos-inner {
-      max-width: 1100px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -613,6 +612,30 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 28px;
+    }
+
+    .logos-marquee {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      /* fade edges */
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+
+    .logos-track {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .logos-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .logos-row {
@@ -628,6 +651,20 @@
       background: var(--border);
       border-radius: 3px;
       opacity: .5;
+    }
+
+    .client-logo {
+      height: 40px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.55);
+      transition: filter .3s ease, transform .2s ease;
+      mix-blend-mode: multiply;
+    }
+    .client-logo:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
     }
 
     /* ── Sections shared ── */
@@ -1507,13 +1544,23 @@
   <div class="logos-section">
     <div class="logos-inner">
       <p class="logos-label">Trusted by forward-thinking businesses</p>
-      <div class="logos-row">
-        <div class="logo-placeholder" style="width:90px"></div>
-        <div class="logo-placeholder" style="width:70px"></div>
-        <div class="logo-placeholder" style="width:110px"></div>
-        <div class="logo-placeholder" style="width:80px"></div>
-        <div class="logo-placeholder" style="width:95px"></div>
-        <div class="logo-placeholder" style="width:65px"></div>
+      <div class="logos-marquee">
+        <div class="logos-track">
+          <!-- first set -->
+          <img src="client%20logo/stemex.png" alt="Stemex" class="client-logo" />
+          <img src="client%20logo/gobar%20john.jpg" alt="Gorbajohn Marketing" class="client-logo" />
+          <img src="client%20logo/easy%20digital.png" alt="Easy Digital" class="client-logo" />
+          <img src="client%20logo/laplock.png" alt="Laplock Technology" class="client-logo" />
+          <img src="client%20logo/Muffin_Break_logo.svg" alt="Muffin Break" class="client-logo" />
+          <img src="client%20logo/exploring%20sciend%20amusemnt%20lab.jpg" alt="Exploring Science Amusement Lab" class="client-logo" />
+          <!-- duplicate for seamless loop -->
+          <img src="client%20logo/stemex.png" alt="Stemex" class="client-logo" aria-hidden="true" />
+          <img src="client%20logo/gobar%20john.jpg" alt="Gorbajohn Marketing" class="client-logo" aria-hidden="true" />
+          <img src="client%20logo/easy%20digital.png" alt="Easy Digital" class="client-logo" aria-hidden="true" />
+          <img src="client%20logo/laplock.png" alt="Laplock Technology" class="client-logo" aria-hidden="true" />
+          <img src="client%20logo/Muffin_Break_logo.svg" alt="Muffin Break" class="client-logo" aria-hidden="true" />
+          <img src="client%20logo/exploring%20sciend%20amusemnt%20lab.jpg" alt="Exploring Science Amusement Lab" class="client-logo" aria-hidden="true" />
+        </div>
       </div>
     </div>
   </div>
@@ -1907,7 +1954,7 @@
       <h2>Book your free demo</h2>
       <p>See Macaws live in a 20-minute call. We'll show you exactly how your AI receptionist would sound for your business — no commitment required.</p>
       <a href="https://chao.macaws.ai" target="_blank" rel="noopener" class="btn-demo" style="display:inline-block;text-decoration:none;margin-top:8px">Book a demo →</a>
-      <p class="demo-note">No credit card required · Response within 1 business hour</p>
+      <p class="demo-note">No credit card required</p>
     </div>
   </div>
 
