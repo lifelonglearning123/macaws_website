@@ -1,6 +1,21 @@
 # Macaws.ai blog workflow
 
-This site is a simple static HTML website. The blog workflow stays equally simple:
+This site is a simple static HTML website. The blog workflow stays equally simple.
+
+## Current content preferences from Chao
+
+For future Macaws.ai blog posts:
+
+- use a **stricter brief format** before drafting
+- run a **humanizer skill** pass before finalising the article
+- generate **appropriate blog images** alongside the article
+
+Important note:
+- a `humanizer` skill is **not currently installed** in this workspace, so this part of the workflow is a required dependency rather than a completed capability today
+- for image generation, the closest concrete OpenClaw model target is usually `openai/gpt-image-1` unless Chao specifies a different configured image model
+
+Use `BLOG_BRIEF_TEMPLATE.md` as the input format for new blog requests.
+
 
 - source posts live in `content/blog/*.md`
 - generated public pages live in `blog/*.html`
