@@ -46,7 +46,9 @@ h1 { margin: 18px 0 16px; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; 
 .article-shell { display: grid; grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr); gap: 28px; padding: 0 24px 84px; }
 .article-card { padding: 40px; }
 .sidebar-card { padding: 28px; margin-bottom: 20px; }
-.prose p, .prose ul, .prose h2, .prose h3, .prose h4 { max-width: 720px; }
+.hero-media { margin: 0 0 28px; }
+.hero-media img { display: block; width: 100%; max-width: 720px; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 18px 50px rgba(15, 23, 42, .08); }
+.prose p, .prose ul, .prose h2, .prose h3, .prose h4, .prose .hero-media { max-width: 720px; }
 .prose p, .prose li { font-size: 18px; line-height: 1.9; color: #243042; }
 .prose h2, .prose h3, .prose h4 { margin: 30px 0 14px; line-height: 1.2; letter-spacing: -.02em; }
 .prose h2 { font-size: 34px; }

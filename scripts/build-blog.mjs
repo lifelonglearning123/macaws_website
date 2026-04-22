@@ -31,7 +31,7 @@ fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), buildSitemap(posts, latestDa
 
 console.log(`Built ${posts.length} blog post(s).`);
 
-function buildShell({ title, description, canonical, ogType = 'article', bodyClass = '', schema, body }) {
+function buildShell({ title, description, canonical, ogType = 'article', bodyClass = '', schema, body, ogImage = `${SITE_URL}/brand/macaws_logo.png` }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,11 +48,11 @@ function buildShell({ title, description, canonical, ogType = 'article', bodyCla
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="${escapeHtml(title)}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
-  <meta property="og:image" content="${SITE_URL}/brand/macaws_logo.png" />
+  <meta property="og:image" content="${escapeHtml(ogImage)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
   <meta name="twitter:description" content="${escapeHtml(description)}" />
-  <meta name="twitter:image" content="${SITE_URL}/brand/macaws_logo.png" />
+  <meta name="twitter:image" content="${escapeHtml(ogImage)}" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -172,6 +172,9 @@ function buildBlogIndex(posts) {
 
 function buildPostPage(post, latestPost) {
   const nextRead = latestPost.slug === post.slug ? null : latestPost;
+  const ogImage = post.heroImage
+    ? (post.heroImage.startsWith('http') ? post.heroImage : `${SITE_URL}${post.heroImage.startsWith('/') ? '' : '/'}${post.heroImage}`)
+    : `${SITE_URL}/brand/macaws_logo.png`;
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -181,7 +184,8 @@ function buildPostPage(post, latestPost) {
     author: { '@type': 'Organization', name: post.author },
     publisher: { '@type': 'Organization', name: 'Macaws.ai', logo: { '@type': 'ImageObject', url: `${SITE_URL}/brand/macaws_logo.png` } },
     description: post.summary,
-    mainEntityOfPage: post.canonicalUrl
+    mainEntityOfPage: post.canonicalUrl,
+    image: ogImage
   };
 
   return buildShell({
@@ -190,6 +194,7 @@ function buildPostPage(post, latestPost) {
     canonical: post.canonicalUrl,
     schema,
     bodyClass: 'blog-post-page',
+    ogImage,
     body: `${buildNav('blog')}
   <header class="article-hero">
     <div class="article-hero-inner">
@@ -204,6 +209,7 @@ function buildPostPage(post, latestPost) {
 
   <main class="article-shell">
     <article class="article-card prose">
+      ${post.heroImage ? `<figure class="hero-media"><img src="${escapeHtml(post.heroImage)}" alt="${escapeHtml(post.heroImageAlt)}" loading="eager" /></figure>` : ''}
       ${post.bodyHtml}
     </article>
 
@@ -302,7 +308,9 @@ h1 { margin: 18px 0 16px; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; 
 .article-shell { display: grid; grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr); gap: 28px; padding: 0 24px 84px; }
 .article-card { padding: 40px; }
 .sidebar-card { padding: 28px; margin-bottom: 20px; }
-.prose p, .prose ul, .prose h2, .prose h3, .prose h4 { max-width: 720px; }
+.hero-media { margin: 0 0 28px; }
+.hero-media img { display: block; width: 100%; max-width: 720px; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 18px 50px rgba(15, 23, 42, .08); }
+.prose p, .prose ul, .prose h2, .prose h3, .prose h4, .prose .hero-media { max-width: 720px; }
 .prose p, .prose li { font-size: 18px; line-height: 1.9; color: #243042; }
 .prose h2, .prose h3, .prose h4 { margin: 30px 0 14px; line-height: 1.2; letter-spacing: -.02em; }
 .prose h2 { font-size: 34px; }

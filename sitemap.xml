@@ -3,33 +3,39 @@
 
   <url>
     <loc>https://macaws.ai/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://macaws.ai/about.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://macaws.ai/blog/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://macaws.ai/privacy-policy.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://macaws.ai/terms-of-service.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://macaws.ai/blog/ai-voice-agents-small-business.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://macaws.ai/blog/ai-receptionist-missed-calls.html</loc>

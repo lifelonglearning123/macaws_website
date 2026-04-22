@@ -167,6 +167,8 @@ export function readPosts(rootDir) {
       tags,
       heroTitle: data.heroTitle || data.title || slug,
       heroEyebrow: data.heroEyebrow || 'Macaws.ai blog',
+      heroImage: data.heroImage || '',
+      heroImageAlt: data.heroImageAlt || data.heroTitle || data.title || slug,
       ctaTitle: data.ctaTitle || 'Want an AI receptionist that turns missed calls into booked appointments?',
       ctaBody: data.ctaBody || 'Macaws.ai builds bespoke AI receptionists for UK businesses that want every enquiry handled professionally, day and night.',
       ctaLink: data.ctaLink || 'https://chao.macaws.ai',
