@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-blog": "node scripts/build-blog.mjs",
+    "new-blog-post": "node scripts/new-blog-post.mjs",
+    "test": "node scripts/build-blog.mjs"
   },
   "keywords": [],
   "author": "",
