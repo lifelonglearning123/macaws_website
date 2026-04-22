@@ -11,7 +11,7 @@ For future Macaws.ai blog posts:
 - generate **appropriate blog images** alongside the article
 
 Important note:
-- a `humanizer` skill is **not currently installed** in this workspace, so this part of the workflow is a required dependency rather than a completed capability today
+- the `humanizer` skill is now installed in this workspace and should be used before finalising Macaws.ai blog copy
 - for image generation, the closest concrete OpenClaw model target is usually `openai/gpt-image-1` unless Chao specifies a different configured image model
 
 Use `BLOG_BRIEF_TEMPLATE.md` as the input format for new blog requests.
